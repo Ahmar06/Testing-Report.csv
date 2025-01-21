@@ -1,0 +1,34 @@
+Test Case ID,Scenario,Test Steps,Input Data,Expected Result,Actual Result,Status
+TC-01,Negative : Valid Login,"1. Open the login page.
+ 2. Enter valid username and password.
+ 3. Click on the ""Login"" button.","Username: valid_user
+Password: valid_pass","Login successful, user is redirected to the homepage.","Login successful, user is redirected to the homepage.",Fail
+TC-02,Negative : Invalid Username,"1. Open the login page.
+ 2. Enter an invalid username.
+ 3. Enter a valid password.
+ 4. Click on ""Login"".","Username: invalid_user
+Password: valid_pass","Error message: ""Invalid credentials"" displayed.","Error message: ""Invalid credentials"" displayed.",Fail
+TC-03,Negative : Invalid Password,"1. Open the login page.
+ 2. Enter a valid username.
+ 3. Enter an invalid password.
+ 4. Click on ""Login"".","Username: valid_user
+Password: invalid_pass","Error message: ""Invalid credentials"" displayed.","Error message: ""Invalid credentials"" displayed.",Fail
+TC-04,Negative : Test Case: Empty Fields,"1. Open the login page.
+ 2. Leave both username and password fields empty.
+ 3. Click on ""Login"".","Username: (empty)
+Password: (empty)","Error message: ""Please enter both username and password"" displayed.","Error message: ""Please enter both username and password"" displayed.",Fail
+TC-05,Negativ : Username with Special Characters,"1. Open the login page.
+ 2. Enter a username with special characters.
+ 3. Enter a valid password.
+ 4. Click ""Login"".","Username: ""user@name"" 
+ Password: valid_pass",Error message or login failure due to invalid characters in username.,Login failed due to invalid characters.,Fail
+TC-06,Negative: Test Case: Empty Password Field,"1. Open the login page.
+ 2. Enter a valid username.
+ 3. Leave the password field empty.
+ 4. Click ""Login"".","Username: valid_user
+Password: (empty)","Error message: ""Password cannot be empty"" displayed.","Error message: ""Password cannot be empty"" displayed.",Fail
+TC-07,Negative : Test Case: Remember Me Option,"1. Open the login page.
+ 2. Enter valid username and password.
+ 3. Check ""Remember Me"" box.
+ 4. Click ""Login"".","Username: valid_user
+Password: valid_pass",User should stay logged in even after closing the browser.,User stays logged in even after closing the browser.,Fail
